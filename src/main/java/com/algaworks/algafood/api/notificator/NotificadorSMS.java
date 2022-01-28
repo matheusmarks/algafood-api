@@ -1,9 +1,11 @@
 package com.algaworks.algafood.api.notificator;
 
 import com.algaworks.algafood.api.model.Client;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-//@Component
+@Primary
+@Component
 public class NotificadorSMS implements  Notificador {
 
     public NotificadorSMS() {
@@ -13,6 +15,6 @@ public class NotificadorSMS implements  Notificador {
     @Override
     public void notificar(Client cliente, String mensagem) {
         System.out.printf("Notificando %s através do SMS %s: %s\n",
-                cliente.getNome(), cliente.getEmail(), mensagem);
+                cliente.getNome(), cliente.getTelefone(), mensagem);
     }
 }
