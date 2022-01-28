@@ -1,9 +1,8 @@
 package com.algaworks.algafood.api.notificator;
 
 import com.algaworks.algafood.api.model.Client;
-import org.springframework.beans.factory.annotation.Qualifier;
 
-@Qualifier("high")
+@TipoDoNotificador(NivelUrgencia.URGENTE)
 public class NotificadorEmail implements Notificador {
 
     private boolean caixaAlta;
