@@ -1,10 +1,9 @@
 package com.algaworks.algafood.api.notificator;
 
 import com.algaworks.algafood.api.model.Client;
-import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Qualifier;
 
-import java.util.Locale;
-
+@Qualifier("high")
 public class NotificadorEmail implements Notificador {
 
     private boolean caixaAlta;

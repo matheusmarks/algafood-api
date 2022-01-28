@@ -3,14 +3,14 @@ package com.algaworks.algafood.api.service;
 import com.algaworks.algafood.api.model.Client;
 import com.algaworks.algafood.api.notificator.Notificador;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
-
-import java.util.List;
 
 @Component
 public class AtivacaoClienteService {
 
     @Autowired(required = false)
+    @Qualifier("high")
     private Notificador notificador;
 
     public void ativar(Client cliente) {
