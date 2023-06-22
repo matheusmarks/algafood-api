@@ -1,7 +1,7 @@
-package com.algaworks.algafood.api.infrastructure.repository;
+package com.algaworks.algafood.infrastructure.repository;
 
-import com.algaworks.algafood.api.domain.model.Cozinha;
-import com.algaworks.algafood.api.domain.repository.CozinhaRepository;
+import com.algaworks.algafood.domain.model.Cozinha;
+import com.algaworks.algafood.domain.repository.CozinhaRepository;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.EntityManager;
