@@ -3,7 +3,9 @@ package com.algaworks.algafood.domain.repository;
 import java.util.List;
 
 import com.algaworks.algafood.domain.model.FormaPagamento;
+import org.springframework.stereotype.Component;
 
+@Component
 public interface FormaPagamentoRepository {
 
     List<FormaPagamento> listar();
