@@ -8,5 +8,5 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface PermissaoRepository extends JpaRepository<PermissaoRepository, Long> {
+public interface PermissaoRepository extends JpaRepository<Permissao, Long> {
 }
