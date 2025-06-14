@@ -63,7 +63,9 @@ public class RestauranteController {
             Optional<Restaurante> restauranteAtual = restauranteRepository.findById(restauranteId);
 
             if (restauranteAtual.isPresent()) {
-                BeanUtils.copyProperties(restaurante, restauranteAtual.get(), "id");
+                BeanUtils.copyProperties(restaurante, restauranteAtual.get(),
+                        "id", "formasPagamento", "endereco",
+                        "dataCadastro");
 
                 Restaurante restauranteSalvo = cadastroRestaurante.salvar(restauranteAtual.get());
                 return ResponseEntity.ok(restauranteSalvo);
@@ -100,8 +102,6 @@ public class RestauranteController {
             field.setAccessible(true);
 
             Object novoValor = ReflectionUtils.getField(field, restauranteOrigem);
-
-//			System.out.println(nomePropriedade + " = " + valorPropriedade + " = " + novoValor);
 
             ReflectionUtils.setField(field, restauranteDestino, novoValor);
         });
